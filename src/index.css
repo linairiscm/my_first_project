@@ -1,0 +1,29 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+/* Titolo */
+
+.titolo {
+  color: blue;
+  font-size: 32px;
+}
+
+/* Label */
+
+.etichetta {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Input */ 
+
+.input-nome {
+  font-size: 18px;
+  padding: 10px;
+  width: 250px;
+}
