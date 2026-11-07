@@ -1,12 +1,15 @@
 
 
-export default  function List({ names }) {
+export default function List({ children }) {
   return (
     <ul id="custom_list">
-      {names.map((name) => (
-        <li key={name}>{name}</li>
-      ))}
+      {children}
     </ul>
   );
 }
 
+function ListItem({ children }) {
+  return <li>{children}</li>;
+}
+
+List.Item = ListItem;

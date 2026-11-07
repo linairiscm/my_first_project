@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function Form() {
-  const [name, setName] = useState("");
+   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [submittedData, setSubmittedData] = useState(null);
 
@@ -17,32 +17,60 @@ export default function Form() {
       <h2>Inserisci i tuoi dati</h2>
 
       <form className="user_form" onSubmit={handleSubmit}>
-        <label htmlFor="name">Nome:</label>
-        <input
-          type="text"
+        <Form.Field
+          label="Nome:"
           id="name"
+          type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
 
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
+        <Form.Field
+          label="Email:"
           id="email"
+          type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <button type="submit">Invia</button>
+        <Form.Button>Invia</Form.Button>
       </form>
 
       {submittedData && (
-        <article className="user_card">
-          <h3>Dati inseriti</h3>
-          <p>Nome: {submittedData.name}</p>
-          <p>Email: {submittedData.email}</p>
-        </article>
+        <Form.Card name={submittedData.name} email={submittedData.email} />
       )}
     </section>
   );
 }
+
+function FormField({ label, id, type, value, onChange }) {
+  return (
+    <>
+      <label htmlFor={id}>{label}</label>
+      <input
+        type={type}
+        id={id}
+        value={value}
+        onChange={onChange}
+      />
+    </>
+  );
+}
+
+function FormButton({ children }) {
+  return <button type="submit">{children}</button>;
+}
+
+function FormCard({ name, email }) {
+  return (
+    <article className="user_card">
+      <h3>Dati inseriti</h3>
+      <p>Nome: {name}</p>
+      <p>Email: {email}</p>
+    </article>
+  );
+}
+
+Form.Field = FormField;
+Form.Button = FormButton;
+Form.Card = FormCard;

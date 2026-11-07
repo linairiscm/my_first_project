@@ -12,7 +12,13 @@ function App() {
     <>
       <Navbar />
       <Header title="Benvenuto nel mio sito!" />
-      <List names={names} />
+
+      <List>
+        {names.map((name) => (
+          <List.Item key={name}>{name}</List.Item>
+        ))}
+      </List>
+
       <Counter />
       <Form />
     </>
