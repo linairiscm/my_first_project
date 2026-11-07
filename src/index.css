@@ -43,3 +43,109 @@ body {
   padding: 20px 40px;
   font-size: 20px;
 }
+
+
+/* Counter */
+.counter {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.counter h2 {
+  color: #222;
+  font-size: 28px;
+}
+
+.counter p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.counter_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.counter_buttons button {
+  width: 60px;
+  height: 45px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.counter_buttons button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Form */
+.form_section {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+}
+
+.form_section h2 {
+  text-align: center;
+  color: #222;
+}
+
+.user_form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.user_form label {
+  font-weight: bold;
+}
+
+.user_form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.user_form button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.user_form button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Card */
+.user_card {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.user_card h3 {
+  margin-top: 0;
+  color: #2563eb;
+}
+
+.user_card p {
+  overflow-wrap: anywhere;
+}
