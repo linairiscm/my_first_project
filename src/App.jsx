@@ -1,19 +1,16 @@
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import List from "./components/List";
 
 function App() {
+
+  const names = ["Marco", "Luca", "Giulia", "Andrea"];
+
   return (
     <>
-      <h1 className="titolo">Benvenuto in React!</h1>
-
-      <label className="etichetta" htmlFor="nome">
-        Inserisci il tuo nome:
-      </label>
-
-      <input
-        className="input-nome"
-        type="text"
-        id="nome"
-        placeholder="Scrivi il tuo nome"
-      />
+      <Navbar />
+      <Header title="Benvenuto nel mio sito!"/>
+      <List names={names} />
     </>
   );
 }

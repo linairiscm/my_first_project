@@ -1,29 +1,45 @@
 
-
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  padding: 30px;
 }
 
-/* Titolo */
-
-.titolo {
-  color: blue;
-  font-size: 32px;
+/* Navbar */
+#custom_navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
-/* Label */
-
-.etichetta {
-  display: block;
+#custom_navbar a {
+  color: white;
+  text-decoration: none;
   font-size: 18px;
-  margin-bottom: 10px;
 }
 
-/* Input */ 
+/* Header */
+#custom_header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: lightblue; */
+}
 
-.input-nome {
-  font-size: 18px;
-  padding: 10px;
-  width: 250px;
+/* Title */
+#main_title {
+  color: #222;
+  font-size: 40px;
+}
+
+/* List */
+#custom_list {
+  padding: 20px 40px;
+  font-size: 20px;
 }
