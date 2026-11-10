@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import List from "./components/List";
 import Counter from "./components/Counter";
 import Form from "./components/Form";
+import LoadingData from "./components/LoadingData";
 
 function App() {
   const names = ["Marco", "Luca", "Giulia", "Andrea"];
@@ -21,6 +22,7 @@ function App() {
 
       <Counter />
       <Form />
+      <LoadingData />
     </>
   );
 }

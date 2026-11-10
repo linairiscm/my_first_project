@@ -149,3 +149,54 @@ body {
 .user_card p {
   overflow-wrap: anywhere;
 }
+
+
+
+/* Loading Data */
+.loading_data {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #f5f7fa;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.loading_data h2 {
+  color: #222;
+  font-size: 28px;
+}
+
+.loading_data button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loading_data button:hover {
+  background-color: #1d4ed8;
+}
+
+.loading_data ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.loading_data li {
+  padding: 15px;
+  margin-bottom: 12px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.loading_data li p {
+  margin: 5px 0;
+  overflow-wrap: anywhere;
+}
