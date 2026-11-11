@@ -1,28 +1,22 @@
 
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import List from "./components/List";
-import Counter from "./components/Counter";
-import Form from "./components/Form";
-import LoadingData from "./components/LoadingData";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Homepage from "./views/Homepage";
+import Posts from "./views/Posts";
+import DetailView from "./views/DetailView";
+import Layout from "./components/Layout";
 
 function App() {
-  const names = ["Marco", "Luca", "Giulia", "Andrea"];
-
   return (
     <>
-      <Navbar />
-      <Header title="Benvenuto nel mio sito!" />
-
-      <List>
-        {names.map((name) => (
-          <List.Item key={name}>{name}</List.Item>
-        ))}
-      </List>
-
-      <Counter />
-      <Form />
-      <LoadingData />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Homepage />} />
+            <Route path="/posts" element={<Posts />} />
+            <Route path="/posts/:id" element={<DetailView />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
